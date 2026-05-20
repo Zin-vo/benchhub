@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BenchHub</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #0f0f0f;
+      color: #ffffff;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background-color: #000000;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #ff9900;
+    }
+
+    .logo span {
+      color: #ffffff;
+    }
+
+    .search-bar input {
+      width: 300px;
+      padding: 8px 10px;
+      border-radius: 4px;
+      border: none;
+      outline: none;
+    }
+
+    .nav-links a {
+      margin-left: 16px;
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    /* ===== CATEGORY BAR ===== */
+    .categories {
+      background-color: #1a1a1a;
+      padding: 10px 20px;
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+    }
+
+    .categories a {
+      color: #cccccc;
+      text-decoration: none;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .categories a:hover {
+      color: #ff9900;
+    }
+
+    /* ===== MAIN GRID ===== */
+    main {
+      padding: 24px;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .video-card {
+      background-color: #1b1b1b;
+      border-radius: 6px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .video-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .thumbnail {
+      width: 100%;
+      height: 150px;
+      background: linear-gradient(135deg, #333, #555);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-size: 14px;
+    }
+
+    .video-info {
+      padding: 10px;
+    }
+
+    .video-title {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .video-meta {
+      font-size: 12px;
+      color: #aaaaaa;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: #000000;
+      color: #777777;
+      text-align: center;
+      padding: 16px;
+      font-size: 12px;
+      margin-top: 40px;
+    }
+
+
+
+
+    /* ===== RESPONSIVE BREAKPOINTS ===== */
+
+
+/* Large tablets / small laptops */
+@media (max-width: 1024px) {
+.search-bar input {
+width: 220px;
+}
+}
+
+
+/* Tablets */
+@media (max-width: 768px) {
+header {
+flex-wrap: wrap;
+gap: 12px;
+}
+
+
+.search-bar input {
+width: 100%;
+}
+
+
+.nav-links {
+width: 100%;
+display: flex;
+justify-content: space-around;
+}
+
+
+main {
+padding: 16px;
+}
+
+
+.video-grid {
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+}
+
+
+/* Mobile phones */
+@media (max-width: 480px) {
+header {
+padding: 10px 14px;
+}
+
+
+.logo {
+font-size: 22px;
+}
+
+
+.categories {
+padding: 8px 12px;
+gap: 10px;
+}
+
+
+main {
+padding: 12px;
+}
+
+
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Bench<span>Hub</span></div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search videos..." />
+    </div>
+    <div class="nav-links">
+      <a href="#">Upload</a>
+      <a href="#">Login</a>
+      <a href="#">Sign Up</a>
+    </div>
+  </header>
+
+  <!-- CATEGORIES -->
+  <nav class="categories">
+    <a href="#">Popular</a>
+    <a href="#">New</a>
+    <a href="#">Trending</a>
+    <a href="#">Category 1</a>
+    <a href="#">Category 2</a>
+    <a href="#">Category 3</a>
+    <a href="#">Category 4</a>
+    <a href="#">Category 5</a>
+    <a href="#">Category 6</a>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <div class="video-grid">
+
+      <!-- MOCK VIDEO CARDS (duplicate & replace later) -->
+      <!-- You can replace .thumbnail with <video> or <img> -->
+
+<div class="video-card">
+  <video controls class="thumbnail" src="2481f643-4f1f-4aa3-a87e-a12d10ac27fc.mp4"></video>
+
+  <div class="video-info">
+    <div class="video-title">
+      Bagong Biyak na Buko ang sarap neto. nestfruta buko why not? cocobilat
+    </div>
+    <div class="video-meta">1.2M views • 5 min</div>
+
+    <!-- Download Button -->
+    <a href="2481f643-4f1f-4aa3-a87e-a12d10ac27fc.mp4" download="D:\PH\2481f643-4f1f-4aa3-a87e-a12d10ac27fc.mp4" class="download-btn">
+      ⬇ Download Video
+    </a>
+  </div>
+</div>
+
+      <div class="video-card">
+        <video controls class="thumbnail" src="E:\PH\b6644df9-d90a-4691-bdd4-a8a1683d413b.mp4"></video>
+        <div class="video-info">
+          <div class="video-title">Mas Gusto ni Andrea ang Ice Cream ni Pedro kesa sa tig bebente na Corneto</div>
+          <div class="video-meta">850K views • 8 min</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail">BenchHub</div>
+        <div class="video-info">
+          <div class="video-title">Sample Video Title #3</div>
+          <div class="video-meta">2.3M views • 12 min</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail">BenchHub</div>
+        <div class="video-info">
+          <div class="video-title">Sample Video Title #4</div>
+          <div class="video-meta">430K views • 6 min</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail">BenchHub</div>
+        <div class="video-info">
+          <div class="video-title">Sample Video Title #5</div>
+          <div class="video-meta">3.1M views • 10 min</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail">BenchHub</div>
+        <div class="video-info">
+          <div class="video-title">Sample Video Title #6</div>
+          <div class="video-meta">670K views • 7 min</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail">BenchHub</div>
+        <div class="video-info">
+          <div class="video-title">Sample Video Title #7</div>
+          <div class="video-meta">990K views • 9 min</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail">BenchHub</div>
+        <div class="video-info">
+          <div class="video-title">Sample Video Title #8</div>
+          <div class="video-meta">1.8M views • 11 min</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail">BenchHub</div>
+        <div class="video-info">
+          <div class="video-title">Sample Video Title #9</div>
+          <div class="video-meta">520K views • 4 min</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail">BenchHub</div>
+        <div class="video-info">
+          <div class="video-title">Sample Video Title #10</div>
+          <div class="video-meta">4.4M views • 15 min</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    .
+  </footer>
+
+</body>
+</html>
